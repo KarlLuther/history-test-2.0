@@ -1,16 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
-import "./App.css";
+import "./componentsStyling/App.css";
 import ClassicTests from "./components/ClassicTests";
 import UserProgress from "./components/Progress";
 import AdvancedTests from "./components/AdvancedTests";
-import NavBar from "./components/NavBar";
+import NavBarContainer from "./components/NavBarsConteiner";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <NavBar />
+        <NavBarContainer />
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/ClassicTests" element={<ClassicTests />}></Route>

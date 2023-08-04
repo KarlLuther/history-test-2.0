@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bar-width: 40px;
+  --bar-height: 5px;
+  --hamburger-gap: 7px;
+  --foreground: #333;
+  --bar-background: white;
+  --animation-timing: 200ms;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+}
+
+.full-nav {
+  display: none;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px 0;
+  align-items: center;
+  background-color: var(--background);
+  color: var(--font-colour);
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  margin-left: 20px;
+}
+
+/* BURGER */
+
+.hamburger-link {
+  text-decoration: none;
+  text-align: center;
+  margin-right: 10px;
+  font-size: 1rem;
+  color: var(--font-colour);
+}
+
+/* ICON */
+
+.btn-hamburger {
+  --x-width: calc(var(--hamburger-height) * 1.41421356237);
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--hamburger-gap);
+}
+
+.btn-hamburger::before,
+.btn-hamburger input,
+.btn-hamburger::after {
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--font-colour);
+  transform-origin: left center;
+  border-radius: 9999px;
+  transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing);
+}
+
+.btn-hamburger input {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+  transition-duration: 200ms;
+}
+
+.btn-hamburger:has(input:checked)::before {
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / -2);
+}
+
+.btn-hamburger:has(input:checked)::after {
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / 2);
+}
+
+.btn-hamburger input:checked {
+  opacity: 0;
+  width: 0;
+}
+
+/* HELPER CLASEES */
+
+@media only screen and (min-width: 600px) {
+  .hamburger-navbar {
+    display: none;
+  }
+
+  .btn-hamburger {
+    display: none;
+  }
+
+  .logo {
+    flex-grow: 1;
+  }
+
+  .full-nav {
+    flex-grow: 1.5;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-link {
+    color: var(--font-colour);
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .logo {
+    margin-left: 50px;
+  }
+
+  .full-nav {
+    max-width: 50%;
+  }
+
+  .nav-link {
+    margin-left: 15px;
+  }
+}
