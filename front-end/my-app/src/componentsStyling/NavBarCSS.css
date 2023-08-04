@@ -39,16 +39,6 @@ header {
   margin-left: 20px;
 }
 
-/* BURGER */
-
-.hamburger-link {
-  text-decoration: none;
-  text-align: center;
-  margin-right: 10px;
-  font-size: 1rem;
-  color: var(--font-colour);
-}
-
 /* ICON */
 
 .btn-hamburger {
@@ -124,6 +114,11 @@ header {
     color: var(--font-colour);
     text-decoration: none;
     font-size: 1.1rem;
+    transition: 0.3s;
+  }
+
+  .nav-link:hover {
+    color: #fd7e14;
   }
 }
 
