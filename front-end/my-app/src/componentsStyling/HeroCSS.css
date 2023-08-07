@@ -1,5 +1,95 @@
 .hero-section {
-  height: 50vh;
+  height: 60vh;
   width: 100%;
-  background-color: rgb(121, 233, 233);
 }
+
+.hero-text-flex-container {
+  padding: 100px 10px 40px 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-h1 {
+  text-transform: capitalize;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.hero-text {
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.hero-btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-hero {
+  border: none;
+  background-color: #ff922b;
+  color: white;
+  box-shadow: 0px 0px 5px rgb(61, 58, 58);
+}
+
+.first {
+  font-weight: 800;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  width: 160px;
+  height: 55px;
+  border-radius: 15px;
+}
+
+.second {
+  font-size: 1.1rem;
+  width: 120px;
+  height: 30px;
+  border-radius: 15px;
+  font-weight: 600;
+}
+
+.hero-img {
+  display: none;
+}
+
+@media only screen and (min-width: 425px) {
+  .hero-text-flex-container {
+    padding: 100px 40px 40px 40px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-flex-container {
+    display: flex;
+  }
+
+  .hero-text-flex-container {
+    max-width: 50%;
+  }
+
+  .img-container {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-img {
+    /* margin-top: 20px; */
+    padding: 2px;
+    border: 2px solid #5e60ce;
+    display: block;
+    width: 90%;
+    box-shadow: 0px 0px 5px rgb(61, 58, 58);
+  }
+}
+
+/* 
+1) Всунуть картинку в компонент и сделать ее невидимой
+2) На 768пх сделать видимой и всунуть в флекс контейнер
+3) сделать для нее границу и тень
+ */

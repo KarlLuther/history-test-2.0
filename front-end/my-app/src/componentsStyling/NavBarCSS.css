@@ -37,6 +37,7 @@ header {
 
 .logo {
   margin-left: 20px;
+  font-weight: 900;
 }
 
 /* ICON */
@@ -118,7 +119,7 @@ header {
   }
 
   .nav-link:hover {
-    color: #fd7e14;
+    color: #f08c00;
   }
 }
 
