@@ -1,4 +1,6 @@
 import "../componentsStyling/HeroCSS.css";
+import HeroImg from "../componentsStyling/imgs/hero-girl.webp";
+
 
 const Hero = () => {
   return (
