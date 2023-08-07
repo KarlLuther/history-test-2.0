@@ -19,7 +19,6 @@ const Hero = () => {
             <button className="btn-hero second">More info👇🏻</button>
           </div>
         </div>
-        {/* <div className="background">AAAA</div> */}
         <div className="img-container">
           <img src={HeroImg} alt="hm" className="hero-img" />
         </div>
