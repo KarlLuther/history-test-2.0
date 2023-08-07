@@ -1,5 +1,4 @@
 import "../componentsStyling/HeroCSS.css";
-import HeroImg from "../componentsStyling/imgs/hero-girl.jpg";
 
 const Hero = () => {
   return (
