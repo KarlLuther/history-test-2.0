@@ -1,7 +1,6 @@
 import "../componentsStyling/HeroCSS.css";
 import HeroImg from "../componentsStyling/imgs/hero-girl.webp";
 
-
 const Hero = () => {
   return (
     <section className="hero-section">
@@ -14,7 +13,6 @@ const Hero = () => {
             And learn UK's history in a proper way by practicing your knowledge
             with our improved tests. Good luck! 🫶
           </p>
-          <img />
           <div className="hero-btn-container">
             <button className="btn-hero first">Get Started</button>
             <button className="btn-hero second">More info👇🏻</button>

@@ -1,10 +1,13 @@
 import Hero from "../subComponents/Hero";
+import Fyi from "../subComponents/Fyi";
+import CarouselSection from "./CarouselSection";
 
 const Home = () => {
   return (
     <div className="home">
       <Hero />
-      <h2>Home</h2>
+      <Fyi />
+      <CarouselSection />
     </div>
   );
 };
