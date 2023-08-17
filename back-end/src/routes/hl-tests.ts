@@ -13,7 +13,7 @@ hlTestsRouter.use(express.json());
 
 // GET
 
-hlTestsRouter.get("/", async (_req: Request, res: Response) => {
+hlTestsRouter.get("/hlTests", async (_req: Request, res: Response) => {
   try {
     const hlTests = (await collections.hlTests
       ?.find({})
@@ -25,19 +25,9 @@ hlTestsRouter.get("/", async (_req: Request, res: Response) => {
   }
 });
 
-hlTestsRouter.get("/kavo", async (_req: Request, res: Response) => {
-  try {
-    // const hlTests = (await collections.hlTests.find({}).toArray()) as unknown as hlTest[];
-
-    res.status(200).send("idite nahyi");
-  } catch (error: any) {
-    res.status(500).send(error.message);
-  }
-});
-
 // GET BY ID
 
-hlTestsRouter.get("/:id", async (req: Request, res: Response) => {
+hlTestsRouter.get("/hlTests/:id", async (req: Request, res: Response) => {
   const id = req?.params?.id;
 
   try {
@@ -58,7 +48,7 @@ hlTestsRouter.get("/:id", async (req: Request, res: Response) => {
 
 // POST
 
-hlTestsRouter.post("/", async (req: Request, res: Response) => {
+hlTestsRouter.post("/hlTests", async (req: Request, res: Response) => {
   try {
     const newHlTest = req.body as hlTest;
     const result = await collections.hlTests?.insertOne(newHlTest);
@@ -115,3 +105,5 @@ hlTestsRouter.post("/", async (req: Request, res: Response) => {
 //         res.status(400).send(error.message);
 //     }
 // });
+
+// {"_id":{"$oid":"64de2e3dc926efbed93f6950"},"title":"Cromwell","description":"Idite Nahyi","imgUrl":"https://s3.eu-west-2.amazonaws.com/history-test-2.0/preview-imgs/Oliver-C-min.webp"}
