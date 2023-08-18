@@ -1,9 +1,11 @@
 import express from "express";
 import { connectToDatabase } from "./services/database.service";
 import { hlTestsRouter } from "./routes/hl-tests";
+const cors = require("cors");
 
 const app = express();
 const port = 3000; // default port to listen
+app.use(cors());
 
 // ** TODO ** Replace this code with a call to your games router class to handle all calls to /games endpointy
 
