@@ -1,6 +1,4 @@
 import "../componentsStyling/SliderCSS.css";
-import TestCard from "../subComponents/TestCard";
-import { studyData } from "../fakeCardData";
 import Carousel from "../subComponents/Carousel";
 
 const CarouselSection = () => {

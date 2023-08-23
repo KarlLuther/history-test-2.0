@@ -17,8 +17,6 @@ const Carousel: React.FC = () => {
     fetchData();
   }, []);
 
-  const slides = [1, 2, 3, 4, 5, 6, 7, 8];
-
   const slideLeft = () => {
     const slider = document.getElementById("slider")!;
     slider.scrollLeft = slider.scrollLeft - 240;
@@ -42,7 +40,13 @@ const Carousel: React.FC = () => {
                   backgroundImage: `url(${data.imgUrl})`,
                 }}
               >
-                <h4>{data.title}</h4>
+                <div className="card-text-container">
+                  <h4 className="card-title">{data.title}</h4>
+                  <p className="card-body">{data.description}</p>
+                  <a href="#" className="card-button">
+                    Let's do this!
+                  </a>
+                </div>
               </div>
             </div>
           );
