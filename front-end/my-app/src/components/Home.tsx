@@ -1,15 +1,5 @@
-import Hero from "../subComponents/Hero";
-import Fyi from "../subComponents/Fyi";
-import CarouselSection from "./CarouselSection";
-
 const Home = () => {
-  return (
-    <div className="home">
-      <Hero />
-      <Fyi />
-      <CarouselSection />
-    </div>
-  );
+  return <div className="home">Home</div>;
 };
 
 export default Home;

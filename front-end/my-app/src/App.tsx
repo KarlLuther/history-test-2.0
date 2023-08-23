@@ -4,13 +4,13 @@ import "./componentsStyling/App.css";
 import ClassicTests from "./components/ClassicTests";
 import UserProgress from "./components/Progress";
 import AdvancedTests from "./components/AdvancedTests";
-import NavBarContainer from "./components/NavBarsConteiner";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <NavBarContainer />
+        <NavBar />
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/ClassicTests" element={<ClassicTests />}></Route>
