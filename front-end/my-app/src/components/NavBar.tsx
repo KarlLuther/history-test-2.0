@@ -3,7 +3,7 @@ import "../componentsStyling/NavBar.css";
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-light bg-light navbar-expand-md navbar-styles">
+    <nav className="navbar navbar-light bg-light navbar-expand-md navbar-styles shadow">
       <div className="container" id="nav-container">
         <div className="col-3">
           <a href="#" className="navbar-brand mb-0 h1">
