@@ -16,8 +16,10 @@ const FeatureCard: React.FC<FeatureProps> = ({
   text,
 }) => {
   return (
-    <div className="card shadow" id={id}>
-      <FontAwesomeIcon icon={iconTitle} size={"4x"} />
+    <div className="card" id={id}>
+      <div className="icon-container">
+        <FontAwesomeIcon icon={iconTitle} size={"4x"} className="icon" />
+      </div>
       <div className="card-body">
         <h5 className="card-title text-center">{header}</h5>
         <p className="card-text">{text}</p>

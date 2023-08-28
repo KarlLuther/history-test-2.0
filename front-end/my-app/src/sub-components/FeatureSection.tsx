@@ -1,4 +1,4 @@
-import "../componentsStyling/FeaturesStyling.css";
+import "../componentsStyling/FeatureSection.css";
 import FeatureCard from "./FeatureCard";
 import { FeatureCardData } from "../types";
 import { faWandMagicSparkles } from "@fortawesome/free-solid-svg-icons";
@@ -35,10 +35,10 @@ const featuresData: FeatureCardData[] = [
 
 const Features = () => {
   return (
-    <section className="feature-section">
-      <div className="container " id="fc-container">
-        <h2 className="h2 text-center">Why use our website?</h2>
-        <div className="row">
+    <section className="feature-section ">
+      <div className="container-fluid" id="feature-container">
+        <h2 className="h2 text-center my-4">Why use our website?</h2>
+        <div className="row w-100 mx-0" id="feature-row">
           {featuresData.map((data, index) => (
             <div className="col-sm-12 col-md-6 col-xl-3">
               <FeatureCard

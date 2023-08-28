@@ -1,0 +1,118 @@
+#feature-container {
+  max-width: 1440px;
+}
+
+.feature-section {
+  height: 700px;
+}
+
+[id^="fc"] {
+  padding: 1.4em 1rem 1rem 1rem;
+  margin-top: 20px;
+  transition: box-shadow 0.3s;
+  position: relative;
+}
+
+[id^="fc"] p {
+  font-size: 1rem;
+}
+
+[id^="fc"]:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.icon-container {
+  align-self: center;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  border: 2px solid #c4dff4;
+  padding: 20px;
+  border-radius: 50%;
+  background-color: #c4dff4;
+}
+
+.icon {
+  color: #3c6fa9;
+}
+
+/* AFTER  */
+
+/* .icon-container:before {
+  position: absolute;
+  content: "";
+  height: 1.5em;
+  width: 1.5em;
+  border: 0.12em solid #397ef6;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+[id^="fc"]:hover .icon-container:before {
+  height: 7em;
+  width: 7em;
+} */
+
+.card-text {
+  position: relative;
+  z-index: 1;
+}
+
+.card-text::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background-color: #333;
+  transform-origin: left;
+  transition: width 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.card:hover .card-text::after {
+  width: 100%;
+}
+
+/* 
+[id^="fc"]:hover p::after {
+  background-color: black;
+  height: 5px;
+  width: 100%;
+} */
+
+@media only screen and (min-width: 375px) {
+  .icon-container {
+    width: 43%;
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  .icon-container {
+    width: 35%;
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  .icon-container {
+    width: 35%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  [id^="fc"] {
+    height: 200px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .icon-container {
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .icon-container {
+    width: 40%;
+  }
+}
