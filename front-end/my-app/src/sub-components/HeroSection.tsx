@@ -18,7 +18,7 @@ const Hero = () => {
           <div className="col-6 " id="hero-text-container">
             <div id="hero-text" style={{ height: "100%" }}>
               <h1 className="h1">
-                Prepare for the History Section of your life in the UK test
+                Prepare for the History Section of your life in the UK test!
               </h1>
               <p className="h5">
                 And learn UK's history in a proper way by practicing your

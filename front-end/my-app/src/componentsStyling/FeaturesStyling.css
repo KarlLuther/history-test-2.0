@@ -1,0 +1,23 @@
+#fc-container {
+  width: 90%;
+}
+
+[id^="fc"] {
+  padding: 1.4em 1rem 1rem 1rem;
+  text-align: justify;
+  background: linear-gradient(0deg, #397ef6 10px transparent 10px);
+
+}
+
+/* [id^="fc"] h5 {
+} */
+
+[id^="fc"] p {
+  font-size: 1.3rem;
+}
+
+@media only screen and (min-width: 576px) {
+  #fc-container {
+    width: 95%;
+  }
+}
